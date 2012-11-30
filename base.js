@@ -45,3 +45,23 @@ function stopCalls(e){
 function clearCanvas(index){
 	ch.clear(index);
 }
+
+function openModal(message){
+	$("#modal").popup({ overlayTheme: "a" });
+
+	$("#modal-screen").click(function(e){stopCalls(e);});
+	$( "#modal" ).popup( "open" );
+	$.mobile.loading( 'show', {
+		text: message,
+		textVisible: true,
+		theme: 'a',
+		html: ""
+	});
+	setTimeout("closeLoader()", 3500);
+}
+
+function closeLoader(){
+	$.mobile.loading( 'hide' );
+	$( "#modal" ).popup( "close" );
+	$("#home_continue").removeClass("ui-disabled");
+}

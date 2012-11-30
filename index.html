@@ -55,11 +55,12 @@
 						<option value="2054">2054</option>
 					</select>
 				</div>
-				<input id="home_download" type="submit" data-theme="b" data-icon="arrow-d" data-iconpos="right" value="Download Travel">
-				<a id="home_continue" data-role="button" data-transition="flow" data-theme="b" href="#page5" data-icon="arrow-r" data-iconpos="right">Continue</a>
+				<a id="home_download" data-role="button" data-transition="flow" data-theme="b" data-icon="arrow-d" data-iconpos="right" onclick="openModal('Downloading Travel');">Download Travel</a>
+				<a id="home_continue" data-role="button" data-transition="flow" data-theme="b" href="#page5" data-icon="arrow-r" data-iconpos="right" class="ui-disabled">Continue</a>
 				<a id="home_logout" data-role="button" data-direction="reverse" data-transition="flow" data-theme="b" href="#page1" data-icon="arrow-l" data-iconpos="right">Logout</a>
 			</div>
 		</div>
+		<div data-role="popup" id="modal"></div>
 		<!-- Menu -->
 		<div data-role="page" id="page5">
 			<div id="menu_header" data-theme="a" data-role="header">
@@ -71,7 +72,7 @@
 				<a id="menu_load_deliveries" data-role="button" data-transition="flow" href="#page7" data-icon="arrow-u" data-iconpos="right">Load Deliveries</a>
 				<a id="menu_clients_branches" data-role="button" data-transition="flow" href="#page8" data-icon="search" data-iconpos="right">Clients - Branches</a>
 				<a id="menu_squarting_travel" data-role="button" data-transition="flow" href="#page9" data-icon="check" data-iconpos="right">Squaring Travel</a>
-				<input id="menu_synchronize" type="submit" data-icon="refresh" data-iconpos="right" value="Synchronize">
+				<a id="menu_synchronize" data-role="button" data-icon="refresh" data-iconpos="right" onclick="openModal('Syncronizing with Server');">Synchronize</a>
 			</div>
 		</div>
 		<!-- Planning -->
