@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="mobile.css"/>
+		<link rel="stylesheet" href="codiqa.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="jquery.js"></script>
+		<script src="mobile.js"></script>
+		<script src="codiqa.js"></script>
+		<script src="base.js"></script>
+	</head>
+	
+	<body>
+		<!-- Login -->
+		<div data-role="page" id="page1">
+			<div id="login_header" data-theme="a" data-role="header">
+				<h1 id="login_heading">
+					DeliveryExpress
+				</h1>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="login_user">
+							User:
+						</label>
+						<input name="" id="login_user" placeholder="Email" value="" type="email">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="login_password">
+							Password:
+						</label>
+						<input name="" id="login_password" placeholder="Key Sensitive" value=""
+						type="password">
+					</fieldset>
+				</div>
+				<a id="login_submit" data-role="button" data-transition="flow" href="#page4"
+				data-icon="arrow-r" data-iconpos="right">
+					Login
+				</a>
+			</div>
+		</div>
+		<!-- Home -->
+		<div data-role="page" id="page4">
+			<div id="home_header" data-theme="a" data-role="header">
+				<h3 id="home_heading">
+					DeliveryExpress
+				</h3>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain">
+					<label for="home_travel">
+						Travel:
+					</label>
+					<select id="home_travel" name="">
+						<option value="2401">
+							2401
+						</option>
+						<option value="4398">
+							4398
+						</option>
+						<option value="3684">
+							3684
+						</option>
+						<option value="2054">
+							2054
+						</option>
+					</select>
+				</div>
+				<input id="home_download" type="submit" data-theme="b" data-icon="arrow-d"
+				data-iconpos="right" value="Download Travel">
+				<a id="home_continue" data-role="button" data-transition="flow" data-theme="b"
+				href="#page5" data-icon="arrow-r" data-iconpos="right">
+					Continue
+				</a>
+				<a id="home_logout" data-role="button" data-direction="reverse" data-transition="flow"
+				data-theme="b" href="#page1" data-icon="arrow-l" data-iconpos="right">
+					Logout
+				</a>
+			</div>
+		</div>
+		<!-- Menu -->
+		<div data-role="page" id="page5">
+			<div id="menu_header" data-theme="a" data-role="header">
+				<h1 id="menu_heading">
+					Travel 2401
+				</h1>
+			</div>
+			<div data-role="content">
+				<a id="menu_change_travel" data-role="button" data-direction="reverse"
+				data-transition="flow" href="#page4" data-icon="arrow-l" data-iconpos="right">
+					Change Travel
+				</a>
+				<a id="menu_planning" data-role="button" data-transition="flow" href="#page6"
+				data-icon="grid" data-iconpos="right">
+					Planning
+				</a>
+				<a id="menu_load_deliveries" data-role="button" data-transition="flow"
+				href="#page7" data-icon="arrow-u" data-iconpos="right">
+					Load Deliveries
+				</a>
+				<a id="menu_clients_branches" data-role="button" data-transition="flow"
+				href="#page8" data-icon="search" data-iconpos="right">
+					Clients - Branches
+				</a>
+				<a id="menu_squarting_travel" data-role="button" data-transition="flow"
+				href="#page9" data-icon="check" data-iconpos="right">
+					Squaring Travel
+				</a>
+				<input id="menu_synchronize" type="submit" data-icon="refresh" data-iconpos="right"
+				value="Synchronize">
+			</div>
+		</div>
+		<!-- Planning -->
+		<div data-role="page" id="page6">
+			<div id="planning_header" data-theme="a" data-role="header">
+				<h3 id="planning_heading">
+					Planning
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="planning_title">
+					Stops
+				</h2>
+				<div id="planning_grid" class="ui-grid-b">
+					<div class="ui-block-a">
+						<h4 id="p_stop_label_0">
+							La Sirena - San Isidro
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<a id="p_stop_up_0" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-u" data-iconpos="top">
+						</a>
+					</div>
+					<div class="ui-block-c">
+						<a id="p_stop_down_0" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-d" data-iconpos="bottom">
+						</a>
+					</div>
+					<div class="ui-block-a">
+						<h4 id="p_stop_label_1">
+							Bravo - San Vicente
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<a id="p_stop_up_1" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-u" data-iconpos="top">
+						</a>
+					</div>
+					<div class="ui-block-c">
+						<a id="p_stop_down_1" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-d" data-iconpos="bottom">
+						</a>
+					</div>
+					<div class="ui-block-a">
+						<h4 id="p_stop_label_2">
+							Ole - La Caleta
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<a id="p_stop_up_2" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-u" data-iconpos="top">
+						</a>
+					</div>
+					<div class="ui-block-c">
+						<a id="p_stop_down_2" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-d" data-iconpos="bottom">
+						</a>
+					</div>
+					<div class="ui-block-a">
+						<h4 id="p_stop_label_3">
+							La Sirena - Villa Mella
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<a id="p_stop_up_3" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-u" data-iconpos="top">
+						</a>
+					</div>
+					<div class="ui-block-c">
+						<a id="p_stop_down_3" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-d" data-iconpos="bottom">
+						</a>
+					</div>
+					<div class="ui-block-a">
+						<h4 id="p_stop_label_4">
+							La Sirena - Churchil
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<a id="p_stop_up_4" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-u" data-iconpos="top">
+						</a>
+					</div>
+					<div class="ui-block-c">
+						<a id="p_stop_down_4" data-role="button" data-inline="true" href="#page6"
+						data-icon="arrow-d" data-iconpos="bottom">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="planning_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="planning_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page5" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="check">
+								Apply
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Load Deliveries -->
+		<div data-role="page" id="page7">
+			<div id="load_deliveries_header" data-theme="a" data-role="header">
+				<h3 id="load_deliveries_heading">
+					Load Deliveries
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="load_deliveries_title">
+					Orders
+				</h2>
+				<div id="load_deliveries_grid" class="ui-grid-a">
+					<div class="ui-block-a">
+						<h4 id="ld_order_label_0">
+							La Sirena - Churchil
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-mini="true">
+								<label for="ld_order_field_0">
+								</label>
+								<input name="" id="ld_order_field_0" placeholder="" value="0" type="number">
+							</fieldset>
+						</div>
+					</div>
+					<div class="ui-block-a">
+						<h4 id="ld_order_label_1">
+							La Sirena - Villa Mella
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-mini="true">
+								<label for="ld_order_field_1">
+								</label>
+								<input name="" id="ld_order_field_1" placeholder="" value="0" type="number">
+							</fieldset>
+						</div>
+					</div>
+					<div class="ui-block-a">
+						<h4 id="ld_order_label_2">
+							El Bravo - San Vicente
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-mini="true">
+								<label for="ld_order_field_2">
+								</label>
+								<input name="" id="ld_order_field_2" placeholder="" value="0" type="number">
+							</fieldset>
+						</div>
+					</div>
+					<div class="ui-block-a">
+						<h4 id="ld_order_label_3">
+							La Sirena - San Isidro
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-mini="true">
+								<label for="ld_order_field_3">
+								</label>
+								<input name="" id="ld_order_field_3" placeholder="" value="0" type="number">
+							</fieldset>
+						</div>
+					</div>
+					<div class="ui-block-a">
+						<h4 id="ld_order_label_4">
+							Ole - La Caleta
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-mini="true">
+								<label for="ld_order_field_4">
+								</label>
+								<input name="" id="ld_order_field_4" placeholder="" value="0" type="number">
+							</fieldset>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="ld_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="ld_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page5" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page11" data-theme="" data-icon="check">
+								Apply
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Load Deliveries - Sign -->
+		<div data-role="page" id="page11">
+			<div id="ld_sign_header" data-theme="a" data-role="header">
+				<h3 id="ld_sign_heading">
+					Sign
+				</h3>
+			</div>
+			<div data-role="content">
+				<div style="">
+					<img id="ld_sign_image" style="width: 380px; height: 253px" src="http://i.istockimg.com/file_thumbview_approve/2166906/2/stock-photo-2166906-sign-here.jpg">
+				</div>
+			</div>
+			<div id="ld_sign_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="ld_sign_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page7" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page11" data-theme="" data-icon="refresh">
+								Clear
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="check">
+								Apply
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Clients - Branches -->
+		<div data-role="page" id="page8">
+			<div id="cb_header" data-theme="a" data-role="header">
+				<h3 id="cb_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<ul id="cb_stops" data-role="listview" data-divider-theme="b" data-inset="true">
+					<li data-role="list-divider" role="heading">
+						Stops
+					</li>
+					<li data-theme="c">
+						<a href="#page13" data-transition="flow">
+							La Sirena
+							<span class="ui-li-count">
+								12 Orders
+							</span>
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page13" data-transition="flow">
+							El Bravo
+							<span class="ui-li-count">
+								3 Order
+							</span>
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page13" data-transition="flow">
+							Ole
+							<span class="ui-li-count">
+								4 Orders
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="cb_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="cb_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page5" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Clients - Branches 2 -->
+		<div data-role="page" id="page13">
+			<div id="cb_2_header" data-theme="a" data-role="header">
+				<h3 id="cb_2_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<ul id="cb_2_branches" data-role="listview" data-divider-theme="b" data-inset="true">
+					<li data-role="list-divider" role="heading">
+						Branches
+					</li>
+					<li data-theme="c">
+						<a href="#page14" data-transition="flow">
+							San Isidro
+							<span class="ui-li-count">
+								6 Order
+							</span>
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page14" data-transition="flow">
+							Churchil
+							<span class="ui-li-count">
+								2 Order
+							</span>
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page14" data-transition="flow">
+							Villa Mella
+							<span class="ui-li-count">
+								4 Order
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="cb_2_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="cb_2_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page8" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Clients - Branches 3 -->
+		<div data-role="page" id="page14">
+			<div id="cb_3_header" data-theme="a" data-role="header">
+				<h3 id="cb_3_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="cb_3_client">
+					La Sirena - San Isidro
+				</h2>
+				<div id="cb_3_grid" class="ui-grid-a">
+					<div class="ui-block-a">
+						<h3 id="cb_3_label_0">
+							City:
+						</h3>
+					</div>
+					<div class="ui-block-b">
+						<h5 id="cb_3_value_0">
+							Santo Domingo
+						</h5>
+					</div>
+					<div class="ui-block-a">
+						<h3 id="cb_3_label_1">
+							State:
+						</h3>
+					</div>
+					<div class="ui-block-b">
+						<h5 id="cb_3_value_1">
+							Distrito Nacional
+						</h5>
+					</div>
+					<div class="ui-block-a">
+						<h3 id="cb_3_label_2">
+							Phone:
+						</h3>
+					</div>
+					<div class="ui-block-b">
+						<h5 id="cb_3_value_2">
+							(809) 738-4852
+						</h5>
+					</div>
+					<div class="ui-block-a">
+						<h3 id="cb_3_label_3">
+							Contact:
+						</h3>
+					</div>
+					<div class="ui-block-b">
+						<h5 id="cb_3_value_3">
+							Samuel Luis (809) 483-3220 (849) 658-1021
+						</h5>
+					</div>
+					<div class="ui-block-a">
+						<h3 id="cb_3_label_4">
+							Contact 2:
+						</h3>
+					</div>
+					<div class="ui-block-b">
+						<h5 id="cb_3_value_4">
+							Jinette Lizardo (809) 483-3220 (849) 658-1021
+						</h5>
+					</div>
+					<div class="ui-block-a">
+						<h3 id="cb_3_label_5">
+							Contact 3:
+						</h3>
+					</div>
+					<div class="ui-block-b">
+						<h5 id="cb_3_value_5">
+							Darien Sanchez (809) 483-3220 (849) 658-1021
+						</h5>
+					</div>
+				</div>
+			</div>
+			<div id="cb_3_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="cb_3_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page13" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page15" data-theme="" data-icon="check">
+								Select
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Clients - Branches 4 -->
+		<div data-role="page" id="page15">
+			<div id="cb_4_header" data-theme="a" data-role="header">
+				<h3 id="cb_4_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="cb_4_client">
+					La Sirena - San Isidro
+				</h2>
+				<h4 id="cb_4_title">
+					Orders
+				</h4>
+				<div id="cb_4_orders" data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-type="vertical">
+						<legend>
+						</legend>
+						<input id="checkbox1" name="" type="checkbox">
+						<label for="checkbox1">
+							Order 3320
+						</label>
+						<input id="checkbox2" name="" type="checkbox">
+						<label for="checkbox2">
+							Order 2039
+						</label>
+						<input id="checkbox3" name="" type="checkbox">
+						<label for="checkbox3">
+							Order 4302
+						</label>
+						<input id="checkbox4" name="" type="checkbox">
+						<label for="checkbox4">
+							Order 4353
+						</label>
+						<input id="checkbox5" name="" type="checkbox">
+						<label for="checkbox5">
+							Order 6542
+						</label>
+						<input id="checkbox6" name="" type="checkbox">
+						<label for="checkbox6">
+							Order 2625
+						</label>
+					</fieldset>
+				</div>
+			</div>
+			<div id="cb_4_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="cb_4_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page14" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page16" data-theme="" data-icon="check">
+								Select
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Clients - Branches 5 -->
+		<div data-role="page" id="page16">
+			<div id="cb_5_header" data-theme="a" data-role="header">
+				<h3 id="cb_5_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="cb_5_client">
+					La Sirena - San Isidro
+				</h2>
+				<ul id="cb_5_do" data-role="listview" data-divider-theme="b" data-inset="true">
+					<li data-role="list-divider" role="heading">
+						Delivery Options
+					</li>
+					<li data-theme="c">
+						<a href="#page17" data-transition="flow">
+							Full
+							<span class="ui-li-count">
+								4 Packs
+							</span>
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page20" data-transition="flow">
+							Partial
+							<span class="ui-li-count">
+								Some Packs
+							</span>
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page25" data-transition="flow">
+							Attempt
+							<span class="ui-li-count">
+								0 Packs
+							</span>
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page15" data-transition="flow">
+							None
+							<span class="ui-li-count">
+								0 Packs
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="cb_5_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="cb_5_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page15" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Full Delivery - Receivers -->
+		<div data-role="page" id="page17">
+			<div id="fd_r_header" data-theme="a" data-role="header">
+				<h3 id="fd_r_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="fd_r_client">
+					La Sirena - San Isidro
+				</h2>
+				<ul id="fd_r_receivers" data-role="listview" data-divider-theme="b" data-inset="true">
+					<li data-role="list-divider" role="heading">
+						Receivers
+					</li>
+					<li data-theme="c">
+						<a href="#page23" data-transition="flow">
+							Jose Abreu
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page23" data-transition="flow">
+							Carolina Rodriguez
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page23" data-transition="flow">
+							Pedro Almonte
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page23" data-transition="flow">
+							Jake Jackson
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="fd_r_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="fd_r_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page16" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page18" data-theme="" data-icon="plus">
+								New
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Full - New Receiver -->
+		<div data-role="page" id="page18">
+			<div id="fd_nr_header" data-theme="a" data-role="header">
+				<h3 id="fd_nr_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="fd_nr_title">
+					New Receiver
+				</h2>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="fd_nr_name">
+							Name:
+						</label>
+						<input name="" id="fd_nr_name" placeholder="" value="" type="text">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="fd_nr_last_name">
+							Last Name:
+						</label>
+						<input name="" id="fd_nr_last_name" placeholder="" value="" type="text">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="fd_nr_rel">
+							Relationship:
+						</label>
+						<input name="" id="fd_nr_rel" placeholder="" value="" type="text">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="fd_nr_branch">
+						Branch:
+					</label>
+					<select id="fd_nr_branch" name="">
+						<option value="1">
+							La Sirena - Villa Mella
+						</option>
+					</select>
+				</div>
+			</div>
+			<div id="fd_nr_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="fd_nr_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page17" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page23" data-theme="" data-icon="check">
+								Save
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Full Delivery - Sign -->
+		<div data-role="page" id="page23">
+			<div id="fd_sign_header" data-theme="a" data-role="header">
+				<h3 id="fd_sign_heading">
+					Sign
+				</h3>
+			</div>
+			<div data-role="content">
+				<div style="">
+					<img id="fd_sign_image" style="width: 380px; height: 253px" src="http://i.istockimg.com/file_thumbview_approve/2166906/2/stock-photo-2166906-sign-here.jpg">
+				</div>
+			</div>
+			<div id="fd_sign_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="fd_sign_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page17" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page23" data-theme="" data-icon="refresh">
+								Clear
+							</a>
+						</li>
+						<li>
+							<a href="#page15" data-theme="" data-icon="check">
+								Save
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Partial Delivery -->
+		<div data-role="page" id="page20">
+			<div id="pd_header" data-theme="a" data-role="header">
+				<h3 id="pd_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="pd_client">
+					La Sirena - San Isidro
+				</h2>
+				<h3 id="pd_title">
+					Partial Delivery
+				</h3>
+				<div id="pd_grid" class="ui-grid-a">
+					<div class="ui-block-a">
+						<h4>
+							Total to Deliver:
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-mini="true">
+								<label for="pd_total">
+								</label>
+								<input name="" id="pd_total" placeholder="" value="4" type="number">
+							</fieldset>
+						</div>
+					</div>
+					<div class="ui-block-a">
+						<h4>
+							Undelivered:
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup" data-mini="true">
+								<label for="pd_ud">
+								</label>
+								<input name="" id="pd_ud" placeholder="" value="1" type="number">
+							</fieldset>
+						</div>
+					</div>
+					<div class="ui-block-a">
+						<h4>
+							Reasons:
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<label for="pd_reasons">
+							</label>
+							<select id="pd_reasons" name="" data-mini="true">
+								<option value="1">
+									Reason 1
+								</option>
+								<option value="2">
+									Reason 2
+								</option>
+								<option value="3">
+									Reason 3
+								</option>
+								<option value="4">
+									Other
+								</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="pd_other">
+							Other Reasons:
+						</label>
+						<textarea name="" id="pd_other" placeholder=""></textarea>
+					</fieldset>
+				</div>
+			</div>
+			<div id="pd_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="pd_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page16" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page21" data-theme="" data-icon="check">
+								Save
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Partial Delivery - Receivers -->
+		<div data-role="page" id="page21">
+			<div id="pd_r_header" data-theme="a" data-role="header">
+				<h3 id="pd_r_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="pd_r_client">
+					La Sirena - San Isidro
+				</h2>
+				<ul id="pd_r_receivers" data-role="listview" data-divider-theme="b" data-inset="true">
+					<li data-role="list-divider" role="heading">
+						Receivers
+					</li>
+					<li data-theme="c">
+						<a href="#page24" data-transition="flow">
+							Jose Abreu
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page24" data-transition="flow">
+							Carolina Rodriguez
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page24" data-transition="flow">
+							Pedro Almonte
+						</a>
+					</li>
+					<li data-theme="c">
+						<a href="#page24" data-transition="flow">
+							Jake Jackson
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="pd_r_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="pd_r_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page20" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page26" data-theme="" data-icon="plus">
+								New
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Partial - New Receiver -->
+		<div data-role="page" id="page26">
+			<div id="pd_nr_header" data-theme="a" data-role="header">
+				<h3 id="pd_nr_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="pd_nr_title">
+					New Receiver
+				</h2>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="pd_nr_name">
+							Name:
+						</label>
+						<input name="" id="pd_nr_name" placeholder="" value="" type="text">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="pd_nr_last_name">
+							Last Name:
+						</label>
+						<input name="" id="pd_nr_last_name" placeholder="" value="" type="text">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="pd_nr_rel">
+							Relationship:
+						</label>
+						<input name="" id="pd_nr_rel" placeholder="" value="0" type="number">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="pd_nr_branch">
+						Branch:
+					</label>
+					<select id="pd_nr_branch" name="">
+						<option value="1">
+							La Sirena - Villa Mella
+						</option>
+					</select>
+				</div>
+			</div>
+			<div id="pd_nr_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="pd_nr_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page21" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page24" data-theme="" data-icon="check">
+								Save
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Partial Delivery - Sign -->
+		<div data-role="page" id="page24">
+			<div id="pd_sign_header" data-theme="a" data-role="header">
+				<h3 id="pd_sign_heading">
+					Sign
+				</h3>
+			</div>
+			<div data-role="content">
+				<div style="">
+					<img id="pd_sign_image" style="width: 380px; height: 253px" src="http://i.istockimg.com/file_thumbview_approve/2166906/2/stock-photo-2166906-sign-here.jpg">
+				</div>
+			</div>
+			<div id="pd_sign_nav_bar" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="pd_sign_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page21" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page24" data-theme="" data-icon="refresh">
+								Clear
+							</a>
+						</li>
+						<li>
+							<a href="#page15" data-theme="" data-icon="check">
+								Save
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Delivery Attempt -->
+		<div data-role="page" id="page25">
+			<div id="da_header" data-theme="a" data-role="header">
+				<h3 id="da_heading">
+					Clients
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="da_client">
+					La Sirena - San Isidro
+				</h2>
+				<h3 id="da_title">
+					Delivery Attempt
+				</h3>
+				<div id="da_grid" class="ui-grid-a">
+					<div class="ui-block-a">
+						<h4 id="da_reasons_label">
+							Reasons:
+						</h4>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain">
+							<label for="da_reasons_field">
+							</label>
+							<select id="da_reasons_field" name="" data-mini="true">
+								<option value="1">
+									Reason 1
+								</option>
+								<option value="2">
+									Reason 2
+								</option>
+								<option value="3">
+									Reason 3
+								</option>
+								<option value="4">
+									Other
+								</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="da_other">
+							Other Reasons:
+						</label>
+						<textarea name="" id="da_other" placeholder=""></textarea>
+					</fieldset>
+				</div>
+			</div>
+			<div id="da_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="da_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page16" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+						<li>
+							<a href="#page5" data-theme="" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#page15" data-theme="" data-icon="check">
+								Save
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Squaring Travel -->
+		<div data-role="page" id="page9">
+			<div id="st_header" data-theme="a" data-role="header">
+				<h3 id="st_heading">
+					Squaring
+				</h3>
+			</div>
+			<div data-role="content">
+				<h2 id="st_travel">
+					Travel 2401
+				</h2>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="st_origin">
+							Origin:
+						</label>
+						<input name="" id="st_origin" placeholder="" value="10" type="number">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="st_actual">
+							Actual:
+						</label>
+						<input name="" id="st_actual" placeholder="" value="2" type="number">
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<label for="st_balance">
+							Balance:
+						</label>
+						<input name="" id="st_balance" placeholder="" value="8" type="number">
+					</fieldset>
+				</div>
+			</div>
+			<div id="st_footer" data-theme="a" data-role="footer" data-position="fixed">
+				<div id="st_nav_bar" data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#page5" data-theme="" data-icon="arrow-l">
+								Back
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
