@@ -1,0 +1,80 @@
+div[data-role="page"], .ui-footer{
+	max-width: 320px;
+	max-height: 600px !important;
+}
+
+input, .ui-select{
+	display: block !important;
+	clear: both;
+	width: 100% !important;
+}
+
+.ui-page .ui-field-contain .ui-controlgroup-controls, .ui-field-contain input.ui-input-text, .ui-field-contain textarea.ui-input-text, .ui-field-contain .ui-input-search, .ui-field-contain label.ui-input-text{
+	width: 100%;
+}
+
+#planning_grid .ui-block-a{
+	width: 58%;
+}
+
+
+#planning_grid .ui-block-b, #planning_grid .ui-block-c{
+	width: 20%;
+}
+
+#load_deliveries_grid .ui-block-a{
+	width: 70%;
+}
+
+#load_deliveries_grid .ui-block-b{
+	width: 25%;
+}
+
+input[type=number]{
+	text-align: right;
+}
+
+#cb_3_grid .ui-block-a{
+	width: 35%;
+	height: 40px;
+}
+
+#cb_3_grid .ui-block-b{
+	width: 65%;
+	height: 50px;
+}
+
+#pd_grid .ui-block-a{
+	width: 60%;
+	height: 50px;
+}
+
+#pd_grid .ui-block-b{
+	width: 40%;
+	height: 50px;
+}
+
+#pd_other, #da_other{
+	resize: none;
+	height: 70px;
+}
+
+.ui-header .ui-title, .ui-footer .ui-title{
+	width: 100%;
+	margin: .6em auto;
+}
+
+input:invalid, .invalid {
+	border-color: rgba(255, 0, 0, 0.4);
+}
+
+canvas{
+	background-color: whitesmoke;
+	border: 1px solid #e3e3e3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}

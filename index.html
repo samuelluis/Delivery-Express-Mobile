@@ -10,6 +10,8 @@
 		<script src="jquery.js"></script>
 		<script src="mobile.js"></script>
 		<script src="codiqa.js"></script>
+		<script src="hammer.js"></script>
+		<script src="customhammer.js"></script>
 		<script src="base.js"></script>
 	</head>
 	
@@ -17,207 +19,119 @@
 		<!-- Login -->
 		<div data-role="page" id="page1">
 			<div id="login_header" data-theme="a" data-role="header">
-				<h1 id="login_heading">
-					DeliveryExpress
-				</h1>
+				<h1 id="login_heading">S&amp;J Delivery Express</h1>
 			</div>
 			<div data-role="content">
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup">
-						<label for="login_user">
-							User:
-						</label>
+						<label for="login_user">User:</label>
 						<input name="" id="login_user" placeholder="Email" value="" type="email">
 					</fieldset>
 				</div>
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup">
-						<label for="login_password">
-							Password:
-						</label>
+						<label for="login_password">Password:</label>
 						<input name="" id="login_password" placeholder="Key Sensitive" value=""
 						type="password">
 					</fieldset>
 				</div>
-				<a id="login_submit" data-role="button" data-transition="flow" href="#page4"
-				data-icon="arrow-r" data-iconpos="right">
-					Login
-				</a>
+				<a id="login_submit" data-role="button" data-transition="flow" href="#page4" data-icon="arrow-r" data-iconpos="right" onclick="return validate('#page1', event);">Login</a>
 			</div>
 		</div>
 		<!-- Home -->
 		<div data-role="page" id="page4">
 			<div id="home_header" data-theme="a" data-role="header">
-				<h3 id="home_heading">
-					DeliveryExpress
-				</h3>
+				<h3 id="home_heading">S&amp;J Delivery Express</h3>
 			</div>
 			<div data-role="content">
 				<div data-role="fieldcontain">
-					<label for="home_travel">
-						Travel:
-					</label>
+					<label for="home_travel">Travel:</label>
 					<select id="home_travel" name="">
-						<option value="2401">
-							2401
-						</option>
-						<option value="4398">
-							4398
-						</option>
-						<option value="3684">
-							3684
-						</option>
-						<option value="2054">
-							2054
-						</option>
+						<option value="2401">2401</option>
+						<option value="4398">4398</option>
+						<option value="3684">3684</option>
+						<option value="2054">2054</option>
 					</select>
 				</div>
-				<input id="home_download" type="submit" data-theme="b" data-icon="arrow-d"
-				data-iconpos="right" value="Download Travel">
-				<a id="home_continue" data-role="button" data-transition="flow" data-theme="b"
-				href="#page5" data-icon="arrow-r" data-iconpos="right">
-					Continue
-				</a>
-				<a id="home_logout" data-role="button" data-direction="reverse" data-transition="flow"
-				data-theme="b" href="#page1" data-icon="arrow-l" data-iconpos="right">
-					Logout
-				</a>
+				<input id="home_download" type="submit" data-theme="b" data-icon="arrow-d" data-iconpos="right" value="Download Travel">
+				<a id="home_continue" data-role="button" data-transition="flow" data-theme="b" href="#page5" data-icon="arrow-r" data-iconpos="right">Continue</a>
+				<a id="home_logout" data-role="button" data-direction="reverse" data-transition="flow" data-theme="b" href="#page1" data-icon="arrow-l" data-iconpos="right">Logout</a>
 			</div>
 		</div>
 		<!-- Menu -->
 		<div data-role="page" id="page5">
 			<div id="menu_header" data-theme="a" data-role="header">
-				<h1 id="menu_heading">
-					Travel 2401
-				</h1>
+				<h1 id="menu_heading">S&amp;J Delivery Express - Travel 2401</h1>
 			</div>
 			<div data-role="content">
-				<a id="menu_change_travel" data-role="button" data-direction="reverse"
-				data-transition="flow" href="#page4" data-icon="arrow-l" data-iconpos="right">
-					Change Travel
-				</a>
-				<a id="menu_planning" data-role="button" data-transition="flow" href="#page6"
-				data-icon="grid" data-iconpos="right">
-					Planning
-				</a>
-				<a id="menu_load_deliveries" data-role="button" data-transition="flow"
-				href="#page7" data-icon="arrow-u" data-iconpos="right">
-					Load Deliveries
-				</a>
-				<a id="menu_clients_branches" data-role="button" data-transition="flow"
-				href="#page8" data-icon="search" data-iconpos="right">
-					Clients - Branches
-				</a>
-				<a id="menu_squarting_travel" data-role="button" data-transition="flow"
-				href="#page9" data-icon="check" data-iconpos="right">
-					Squaring Travel
-				</a>
-				<input id="menu_synchronize" type="submit" data-icon="refresh" data-iconpos="right"
-				value="Synchronize">
+				<a id="menu_change_travel" data-role="button" data-direction="reverse" data-transition="flow" href="#page4" data-icon="arrow-l" data-iconpos="right">Change Travel</a>
+				<a id="menu_planning" data-role="button" data-transition="flow" href="#page6" data-icon="grid" data-iconpos="right">Planning</a>
+				<a id="menu_load_deliveries" data-role="button" data-transition="flow" href="#page7" data-icon="arrow-u" data-iconpos="right">Load Deliveries</a>
+				<a id="menu_clients_branches" data-role="button" data-transition="flow" href="#page8" data-icon="search" data-iconpos="right">Clients - Branches</a>
+				<a id="menu_squarting_travel" data-role="button" data-transition="flow" href="#page9" data-icon="check" data-iconpos="right">Squaring Travel</a>
+				<input id="menu_synchronize" type="submit" data-icon="refresh" data-iconpos="right" value="Synchronize">
 			</div>
 		</div>
 		<!-- Planning -->
 		<div data-role="page" id="page6">
 			<div id="planning_header" data-theme="a" data-role="header">
-				<h3 id="planning_heading">
-					Planning
-				</h3>
+				<h3 id="planning_heading">S&amp;J Delivery Express - Planning</h3>
 			</div>
 			<div data-role="content">
-				<h2 id="planning_title">
-					Stops
-				</h2>
+				<h2 id="planning_title">Stops</h2>
 				<div id="planning_grid" class="ui-grid-b">
 					<div class="ui-block-a">
-						<h4 id="p_stop_label_0">
-							La Sirena - San Isidro
-						</h4>
+						<h4 id="p_stop_label_0">La Sirena - San Isidro</h4>
 					</div>
 					<div class="ui-block-b">
-						<a id="p_stop_up_0" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-u" data-iconpos="top">
-						</a>
+						<a id="p_stop_up_0" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
 					</div>
 					<div class="ui-block-c">
-						<a id="p_stop_down_0" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-d" data-iconpos="bottom">
-						</a>
+						<a id="p_stop_down_0" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
 					</div>
 					<div class="ui-block-a">
-						<h4 id="p_stop_label_1">
-							Bravo - San Vicente
-						</h4>
+						<h4 id="p_stop_label_1">Bravo - San Vicente</h4>
 					</div>
 					<div class="ui-block-b">
-						<a id="p_stop_up_1" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-u" data-iconpos="top">
-						</a>
+						<a id="p_stop_up_1" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
 					</div>
 					<div class="ui-block-c">
-						<a id="p_stop_down_1" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-d" data-iconpos="bottom">
-						</a>
+						<a id="p_stop_down_1" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
 					</div>
 					<div class="ui-block-a">
-						<h4 id="p_stop_label_2">
-							Ole - La Caleta
-						</h4>
+						<h4 id="p_stop_label_2">Ole - La Caleta</h4>
 					</div>
 					<div class="ui-block-b">
-						<a id="p_stop_up_2" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-u" data-iconpos="top">
-						</a>
+						<a id="p_stop_up_2" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
 					</div>
 					<div class="ui-block-c">
-						<a id="p_stop_down_2" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-d" data-iconpos="bottom">
-						</a>
+						<a id="p_stop_down_2" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
 					</div>
 					<div class="ui-block-a">
-						<h4 id="p_stop_label_3">
-							La Sirena - Villa Mella
-						</h4>
+						<h4 id="p_stop_label_3">La Sirena - Villa Mella</h4>
 					</div>
 					<div class="ui-block-b">
-						<a id="p_stop_up_3" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-u" data-iconpos="top">
-						</a>
+						<a id="p_stop_up_3" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
 					</div>
 					<div class="ui-block-c">
-						<a id="p_stop_down_3" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-d" data-iconpos="bottom">
-						</a>
+						<a id="p_stop_down_3" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
 					</div>
 					<div class="ui-block-a">
-						<h4 id="p_stop_label_4">
-							La Sirena - Churchil
-						</h4>
+						<h4 id="p_stop_label_4">La Sirena - Churchil</h4>
 					</div>
 					<div class="ui-block-b">
-						<a id="p_stop_up_4" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-u" data-iconpos="top">
-						</a>
+						<a id="p_stop_up_4" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
 					</div>
 					<div class="ui-block-c">
-						<a id="p_stop_down_4" data-role="button" data-inline="true" href="#page6"
-						data-icon="arrow-d" data-iconpos="bottom">
-						</a>
+						<a id="p_stop_down_4" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
 					</div>
 				</div>
 			</div>
 			<div id="planning_footer" data-theme="a" data-role="footer" data-position="fixed">
 				<div id="planning_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
-						<li>
-							<a href="#page5" data-theme="" data-icon="arrow-l">
-								Back
-							</a>
-						</li>
-						<li>
-							<a href="#page5" data-theme="" data-icon="check">
-								Apply
-							</a>
-						</li>
+						<li><a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">Back</a></li>
+						<li><a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="check">Apply</a></li>
 					</ul>
 				</div>
 			</div>
@@ -225,81 +139,57 @@
 		<!-- Load Deliveries -->
 		<div data-role="page" id="page7">
 			<div id="load_deliveries_header" data-theme="a" data-role="header">
-				<h3 id="load_deliveries_heading">
-					Load Deliveries
-				</h3>
+				<h3 id="load_deliveries_heading">S&amp;J Delivery Express - Load Deliveries</h3>
 			</div>
 			<div data-role="content">
-				<h2 id="load_deliveries_title">
-					Orders
-				</h2>
+				<h2 id="load_deliveries_title">Orders</h2>
 				<div id="load_deliveries_grid" class="ui-grid-a">
 					<div class="ui-block-a">
-						<h4 id="ld_order_label_0">
-							La Sirena - Churchil
-						</h4>
+						<h4 id="ld_order_label_0">La Sirena - Churchil</h4>
 					</div>
 					<div class="ui-block-b">
 						<div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" data-mini="true">
-								<label for="ld_order_field_0">
-								</label>
 								<input name="" id="ld_order_field_0" placeholder="" value="0" type="number">
 							</fieldset>
 						</div>
 					</div>
 					<div class="ui-block-a">
-						<h4 id="ld_order_label_1">
-							La Sirena - Villa Mella
-						</h4>
+						<h4 id="ld_order_label_1">La Sirena - Villa Mella</h4>
 					</div>
 					<div class="ui-block-b">
 						<div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" data-mini="true">
-								<label for="ld_order_field_1">
-								</label>
 								<input name="" id="ld_order_field_1" placeholder="" value="0" type="number">
 							</fieldset>
 						</div>
 					</div>
 					<div class="ui-block-a">
-						<h4 id="ld_order_label_2">
-							El Bravo - San Vicente
-						</h4>
+						<h4 id="ld_order_label_2">El Bravo - San Vicente</h4>
 					</div>
 					<div class="ui-block-b">
 						<div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" data-mini="true">
-								<label for="ld_order_field_2">
-								</label>
 								<input name="" id="ld_order_field_2" placeholder="" value="0" type="number">
 							</fieldset>
 						</div>
 					</div>
 					<div class="ui-block-a">
-						<h4 id="ld_order_label_3">
-							La Sirena - San Isidro
-						</h4>
+						<h4 id="ld_order_label_3">La Sirena - San Isidro</h4>
 					</div>
 					<div class="ui-block-b">
 						<div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" data-mini="true">
-								<label for="ld_order_field_3">
-								</label>
 								<input name="" id="ld_order_field_3" placeholder="" value="0" type="number">
 							</fieldset>
 						</div>
 					</div>
 					<div class="ui-block-a">
-						<h4 id="ld_order_label_4">
-							Ole - La Caleta
-						</h4>
+						<h4 id="ld_order_label_4">Ole - La Caleta</h4>
 					</div>
 					<div class="ui-block-b">
 						<div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" data-mini="true">
-								<label for="ld_order_field_4">
-								</label>
 								<input name="" id="ld_order_field_4" placeholder="" value="0" type="number">
 							</fieldset>
 						</div>
@@ -309,16 +199,8 @@
 			<div id="ld_footer" data-theme="a" data-role="footer" data-position="fixed">
 				<div id="ld_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
-						<li>
-							<a href="#page5" data-theme="" data-icon="arrow-l">
-								Back
-							</a>
-						</li>
-						<li>
-							<a href="#page11" data-theme="" data-icon="check">
-								Apply
-							</a>
-						</li>
+						<li><a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">Back</a></li>
+						<li><a href="#page11" data-theme="" data-role="button" data-transition="flow" data-icon="check" onclick="return validate('#page7', event);">Apply</a></li>
 					</ul>
 				</div>
 			</div>
@@ -326,33 +208,19 @@
 		<!-- Load Deliveries - Sign -->
 		<div data-role="page" id="page11">
 			<div id="ld_sign_header" data-theme="a" data-role="header">
-				<h3 id="ld_sign_heading">
-					Sign
-				</h3>
+				<h3 id="ld_sign_heading">Sign</h3>
 			</div>
 			<div data-role="content">
 				<div style="">
-					<img id="ld_sign_image" style="width: 380px; height: 253px" src="http://i.istockimg.com/file_thumbview_approve/2166906/2/stock-photo-2166906-sign-here.jpg">
+					<canvas width="290" height="400"></canvas>
 				</div>
 			</div>
 			<div id="ld_sign_footer" data-theme="a" data-role="footer" data-position="fixed">
 				<div id="ld_sign_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
-						<li>
-							<a href="#page7" data-theme="" data-icon="arrow-l">
-								Back
-							</a>
-						</li>
-						<li>
-							<a href="#page11" data-theme="" data-icon="refresh">
-								Clear
-							</a>
-						</li>
-						<li>
-							<a href="#page5" data-theme="" data-icon="check">
-								Apply
-							</a>
-						</li>
+						<li><a href="#page7" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">Back</a></li>
+						<li><a href="#page11" data-theme="" data-icon="refresh" onclick="clearCanvas('#page11');">Clear</a></li>
+						<li><a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="check">Apply</a></li>
 					</ul>
 				</div>
 			</div>
@@ -360,49 +228,20 @@
 		<!-- Clients - Branches -->
 		<div data-role="page" id="page8">
 			<div id="cb_header" data-theme="a" data-role="header">
-				<h3 id="cb_heading">
-					Clients
-				</h3>
+				<h3 id="cb_heading">S&amp;J Delivery Express - Clients</h3>
 			</div>
 			<div data-role="content">
 				<ul id="cb_stops" data-role="listview" data-divider-theme="b" data-inset="true">
-					<li data-role="list-divider" role="heading">
-						Stops
-					</li>
-					<li data-theme="c">
-						<a href="#page13" data-transition="flow">
-							La Sirena
-							<span class="ui-li-count">
-								12 Orders
-							</span>
-						</a>
-					</li>
-					<li data-theme="c">
-						<a href="#page13" data-transition="flow">
-							El Bravo
-							<span class="ui-li-count">
-								3 Order
-							</span>
-						</a>
-					</li>
-					<li data-theme="c">
-						<a href="#page13" data-transition="flow">
-							Ole
-							<span class="ui-li-count">
-								4 Orders
-							</span>
-						</a>
-					</li>
+					<li data-role="list-divider" role="heading">Stops</li>
+					<li data-theme="c"><a href="#page13" data-transition="flow">La Sirena<span class="ui-li-count">12 Orders</span></a></li>
+					<li data-theme="c"><a href="#page13" data-transition="flow">El Bravo<span class="ui-li-count">3 Order</span></a></li>
+					<li data-theme="c"><a href="#page13" data-transition="flow">Ole<span class="ui-li-count">4 Orders</span></a></li>
 				</ul>
 			</div>
 			<div id="cb_footer" data-theme="a" data-role="footer" data-position="fixed">
 				<div id="cb_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
-						<li>
-							<a href="#page5" data-theme="" data-icon="arrow-l">
-								Back
-							</a>
-						</li>
+						<li><a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">Back</a></li>
 					</ul>
 				</div>
 			</div>
@@ -449,12 +288,12 @@
 				<div id="cb_2_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page8" data-theme="" data-icon="arrow-l">
+							<a href="#page8" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
@@ -540,17 +379,17 @@
 				<div id="cb_3_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page13" data-theme="" data-icon="arrow-l">
+							<a href="#page13" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page15" data-theme="" data-icon="check">
+							<a href="#page15" data-theme="" data-role="button" data-transition="flow" data-icon="check">
 								Select
 							</a>
 						</li>
@@ -607,17 +446,17 @@
 				<div id="cb_4_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page14" data-theme="" data-icon="arrow-l">
+							<a href="#page14" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page16" data-theme="" data-icon="check">
+							<a href="#page16" data-theme="" data-role="button" data-transition="flow" data-icon="check" onclick="return validateCheck('#page15', event);">
 								Select
 							</a>
 						</li>
@@ -678,12 +517,12 @@
 				<div id="cb_5_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page15" data-theme="" data-icon="arrow-l">
+							<a href="#page15" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
@@ -732,17 +571,17 @@
 				<div id="fd_r_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page16" data-theme="" data-icon="arrow-l">
+							<a href="#page16" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page18" data-theme="" data-icon="plus">
+							<a href="#page18" data-theme="" data-role="button" data-transition="flow" data-icon="plus">
 								New
 							</a>
 						</li>
@@ -800,17 +639,17 @@
 				<div id="fd_nr_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page17" data-theme="" data-icon="arrow-l">
+							<a href="#page17" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page23" data-theme="" data-icon="check">
+							<a href="#page23" data-theme="" data-role="button" data-transition="flow" data-icon="check" onclick="return validate('#page18', event);">
 								Save
 							</a>
 						</li>
@@ -827,29 +666,29 @@
 			</div>
 			<div data-role="content">
 				<div style="">
-					<img id="fd_sign_image" style="width: 380px; height: 253px" src="http://i.istockimg.com/file_thumbview_approve/2166906/2/stock-photo-2166906-sign-here.jpg">
+					<canvas width="290" height="400"></canvas>
 				</div>
 			</div>
 			<div id="fd_sign_footer" data-theme="a" data-role="footer" data-position="fixed">
 				<div id="fd_sign_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page17" data-theme="" data-icon="arrow-l">
+							<a href="#page17" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page23" data-theme="" data-icon="refresh">
+							<a href="#page23" data-theme="" data-icon="refresh" onclick="clearCanvas('#page23');">
 								Clear
 							</a>
 						</li>
 						<li>
-							<a href="#page15" data-theme="" data-icon="check">
+							<a href="#page15" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="check">
 								Save
 							</a>
 						</li>
@@ -880,8 +719,6 @@
 					<div class="ui-block-b">
 						<div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" data-mini="true">
-								<label for="pd_total">
-								</label>
 								<input name="" id="pd_total" placeholder="" value="4" type="number">
 							</fieldset>
 						</div>
@@ -894,8 +731,6 @@
 					<div class="ui-block-b">
 						<div data-role="fieldcontain">
 							<fieldset data-role="controlgroup" data-mini="true">
-								<label for="pd_ud">
-								</label>
 								<input name="" id="pd_ud" placeholder="" value="1" type="number">
 							</fieldset>
 						</div>
@@ -907,8 +742,6 @@
 					</div>
 					<div class="ui-block-b">
 						<div data-role="fieldcontain">
-							<label for="pd_reasons">
-							</label>
 							<select id="pd_reasons" name="" data-mini="true">
 								<option value="1">
 									Reason 1
@@ -939,17 +772,17 @@
 				<div id="pd_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page16" data-theme="" data-icon="arrow-l">
+							<a href="#page16" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page21" data-theme="" data-icon="check">
+							<a href="#page21" data-theme="" data-role="button" data-transition="flow" data-icon="check" onclick="return validate('#page20', event);">
 								Save
 							</a>
 						</li>
@@ -998,17 +831,17 @@
 				<div id="pd_r_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page20" data-theme="" data-icon="arrow-l">
+							<a href="#page20" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page26" data-theme="" data-icon="plus">
+							<a href="#page26" data-theme="" data-role="button" data-transition="flow" data-icon="plus">
 								New
 							</a>
 						</li>
@@ -1048,7 +881,7 @@
 						<label for="pd_nr_rel">
 							Relationship:
 						</label>
-						<input name="" id="pd_nr_rel" placeholder="" value="0" type="number">
+						<input name="" id="pd_nr_rel" placeholder="" value="" type="text">
 					</fieldset>
 				</div>
 				<div data-role="fieldcontain">
@@ -1066,17 +899,17 @@
 				<div id="pd_nr_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page21" data-theme="" data-icon="arrow-l">
+							<a href="#page21" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page24" data-theme="" data-icon="check">
+							<a href="#page24" data-theme="" data-role="button" data-transition="flow" data-icon="check" onclick="return validate('#page26', event);">
 								Save
 							</a>
 						</li>
@@ -1093,29 +926,29 @@
 			</div>
 			<div data-role="content">
 				<div style="">
-					<img id="pd_sign_image" style="width: 380px; height: 253px" src="http://i.istockimg.com/file_thumbview_approve/2166906/2/stock-photo-2166906-sign-here.jpg">
+					<canvas width="290" height="400"></canvas>
 				</div>
 			</div>
-			<div id="pd_sign_nav_bar" data-theme="a" data-role="footer" data-position="fixed">
+			<div id="pd_sign_footer" data-theme="a" data-role="footer" data-position="fixed">
 				<div id="pd_sign_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page21" data-theme="" data-icon="arrow-l">
+							<a href="#page21" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page24" data-theme="" data-icon="refresh">
+							<a href="#page24" data-theme="" data-icon="refresh" onclick="clearCanvas('#page24');">
 								Clear
 							</a>
 						</li>
 						<li>
-							<a href="#page15" data-theme="" data-icon="check">
+							<a href="#page15" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="check">
 								Save
 							</a>
 						</li>
@@ -1177,17 +1010,17 @@
 				<div id="da_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page16" data-theme="" data-icon="arrow-l">
+							<a href="#page16" data-role="button" data-transition="flow" data-direction="reverse" data-theme="" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
 						<li>
-							<a href="#page5" data-theme="" data-icon="home">
+							<a href="#page5" data-role="button" data-transition="flow" data-direction="reverse" data-theme="" data-icon="home">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#page15" data-theme="" data-icon="check">
+							<a href="#page15" data-role="button" data-transition="flow" data-direction="reverse" data-theme="" data-icon="check" onclick="return validate('#page25', event);">
 								Save
 							</a>
 						</li>
@@ -1211,7 +1044,7 @@
 						<label for="st_origin">
 							Origin:
 						</label>
-						<input name="" id="st_origin" placeholder="" value="10" type="number">
+						<input name="" id="st_origin" placeholder="" value="10" type="number" disabled="disabled">
 					</fieldset>
 				</div>
 				<div data-role="fieldcontain">
@@ -1219,7 +1052,7 @@
 						<label for="st_actual">
 							Actual:
 						</label>
-						<input name="" id="st_actual" placeholder="" value="2" type="number">
+						<input name="" id="st_actual" placeholder="" value="2" type="number" disabled="disabled">
 					</fieldset>
 				</div>
 				<div data-role="fieldcontain">
@@ -1227,7 +1060,7 @@
 						<label for="st_balance">
 							Balance:
 						</label>
-						<input name="" id="st_balance" placeholder="" value="8" type="number">
+						<input name="" id="st_balance" placeholder="" value="8" type="number" disabled="disabled">
 					</fieldset>
 				</div>
 			</div>
@@ -1235,7 +1068,7 @@
 				<div id="st_nav_bar" data-role="navbar" data-iconpos="top">
 					<ul>
 						<li>
-							<a href="#page5" data-theme="" data-icon="arrow-l">
+							<a href="#page5" data-theme="" data-role="button" data-transition="flow" data-direction="reverse" data-icon="arrow-l">
 								Back
 							</a>
 						</li>
