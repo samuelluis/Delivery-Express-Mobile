@@ -4,10 +4,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jqueryui.css"/>
 		<link rel="stylesheet" href="mobile.css"/>
 		<link rel="stylesheet" href="codiqa.css" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="jquery.js"></script>
+		<script src="jqueryui.js"></script>
 		<script src="mobile.js"></script>
 		<script src="codiqa.js"></script>
 		<script src="hammer.js"></script>
@@ -79,53 +81,14 @@
 			</div>
 			<div data-role="content">
 				<h2 id="planning_title">Stops</h2>
-				<div id="planning_grid" class="ui-grid-b">
-					<div class="ui-block-a">
-						<h4 id="p_stop_label_0">La Sirena - San Isidro</h4>
-					</div>
-					<div class="ui-block-b">
-						<a id="p_stop_up_0" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
-					</div>
-					<div class="ui-block-c">
-						<a id="p_stop_down_0" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
-					</div>
-					<div class="ui-block-a">
-						<h4 id="p_stop_label_1">Bravo - San Vicente</h4>
-					</div>
-					<div class="ui-block-b">
-						<a id="p_stop_up_1" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
-					</div>
-					<div class="ui-block-c">
-						<a id="p_stop_down_1" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
-					</div>
-					<div class="ui-block-a">
-						<h4 id="p_stop_label_2">Ole - La Caleta</h4>
-					</div>
-					<div class="ui-block-b">
-						<a id="p_stop_up_2" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
-					</div>
-					<div class="ui-block-c">
-						<a id="p_stop_down_2" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
-					</div>
-					<div class="ui-block-a">
-						<h4 id="p_stop_label_3">La Sirena - Villa Mella</h4>
-					</div>
-					<div class="ui-block-b">
-						<a id="p_stop_up_3" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
-					</div>
-					<div class="ui-block-c">
-						<a id="p_stop_down_3" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
-					</div>
-					<div class="ui-block-a">
-						<h4 id="p_stop_label_4">La Sirena - Churchil</h4>
-					</div>
-					<div class="ui-block-b">
-						<a id="p_stop_up_4" data-role="button" data-inline="true" href="#page6" data-icon="arrow-u" data-iconpos="top"></a>
-					</div>
-					<div class="ui-block-c">
-						<a id="p_stop_down_4" data-role="button" data-inline="true" href="#page6" data-icon="arrow-d" data-iconpos="bottom"></a>
-					</div>
-				</div>
+				<ul id="planning_list">
+					<li><a data-role="button" data-icon="grid" data-iconpos="right">La Sirena - San Isidro</a></li>
+					<li><a data-role="button" data-icon="grid" data-iconpos="right">Bravo - San Vicente</a></li>
+					<li><a data-role="button" data-icon="grid" data-iconpos="right">Ole - La Caleta</a></li>
+					<li><a data-role="button" data-icon="grid" data-iconpos="right">La Sirena - Villa Mella</a></li>
+					<li><a data-role="button" data-icon="grid" data-iconpos="right">La Sirena - Churchil</a></li>
+				</ul>
+				<br><br><div><p><b>Sort the orders as you want...</b></p></div>
 			</div>
 			<div id="planning_footer" data-theme="a" data-role="footer" data-position="fixed">
 				<div id="planning_nav_bar" data-role="navbar" data-iconpos="top">

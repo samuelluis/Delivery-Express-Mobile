@@ -5,6 +5,9 @@ $(function(){
 	});
 
 	ch = new CustomHammer([$("#page11 canvas")[0],$("#page23 canvas")[0],$("#page24 canvas")[0]]);
+
+	$("#planning_list").sortable();
+	$("#planning_list").disableSelection();
 });
 
 function validate(form_id, e){
