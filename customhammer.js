@@ -140,6 +140,6 @@ function CustomHammer(canvas){
     };
 
     this.clear = function(index){
-        ctx[index].clearRect (0, 0, 290, 400);
+        ctx[index].clearRect (0, 0, $(canvas[index]).width(), $(canvas[index]).height());
     }
 }

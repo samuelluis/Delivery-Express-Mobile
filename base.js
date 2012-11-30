@@ -8,7 +8,19 @@ $(function(){
 
 	$("#planning_list").sortable();
 	$("#planning_list").disableSelection();
+
+	adjustSign();
+	$(window).resize(function() {
+		adjustSign();
+	});
 });
+
+function adjustSign(){
+	w = $(window).width();
+	h = $(window).height();
+	$("canvas").attr("width",(w-30)+"").attr("height", (h-140)+"");
+	$("canvas").css("width",(w-30)+"px").css("height", (h-140)+"px");
+}
 
 function validate(form_id, e){
 	var valid = true;
