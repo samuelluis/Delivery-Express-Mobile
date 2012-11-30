@@ -138,4 +138,8 @@ function CustomHammer(canvas){
     hammer[2].ondragend = function(e){
         suelto[2] = true;
     };
+
+    this.clear = function(index){
+        ctx[index].clearRect (0, 0, 290, 400);
+    }
 }

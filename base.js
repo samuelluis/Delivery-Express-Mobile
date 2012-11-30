@@ -1,9 +1,10 @@
+var ch = null;
 $(function(){
 	$("input").keyup(function(){
 		$(this).removeClass("invalid");
 	});
 
-	new CustomHammer([$("#page11 canvas")[0],$("#page23 canvas")[0],$("#page24 canvas")[0]]);
+	ch = new CustomHammer([$("#page11 canvas")[0],$("#page23 canvas")[0],$("#page24 canvas")[0]]);
 });
 
 function validate(form_id, e){
@@ -38,8 +39,6 @@ function stopCalls(e){
 	}
 }
 
-function clearCanvas(page_id){
-	canvas = $(page_id+" canvas")[0];
-	ctx = canvas.getContext("2d");
-	ctx.clearRect (0, 0, 290, 400);
+function clearCanvas(index){
+	ch.clear(index);
 }
